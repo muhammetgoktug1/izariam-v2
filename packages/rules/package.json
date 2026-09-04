@@ -1,0 +1,28 @@
+{
+  "name": "@izariam/rules",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./actions/building": "./src/actions/building.ts",
+    "./actions/military": "./src/actions/military.ts",
+    "./actions/trade": "./src/actions/trade.ts",
+    "./actions/colony": "./src/actions/colony.ts",
+    "./espionage": "./src/espionage.ts",
+    "./traderoutes": "./src/traderoutes.ts",
+    "./missions": "./src/missions.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@izariam/gamedata": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

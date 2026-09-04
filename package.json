@@ -1,0 +1,23 @@
+{
+  "name": "izariam",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "gamedata:extract": "python3 tools/extract-gamedata.py",
+    "gamedata:verify": "python3 tools/verify-gamedata.py",
+    "db:generate": "npm run -w @izariam/db generate",
+    "db:migrate": "npm run -w @izariam/db migrate",
+    "db:seed": "npm run -w @izariam/db seed",
+    "typecheck": "tsc -p packages/shared --noEmit && tsc -p packages/rules --noEmit && tsc -p packages/db --noEmit && tsc -p apps/api --noEmit && tsc -p apps/web --noEmit && tsc -p apps/admin --noEmit",
+    "test": "npm run typecheck && npm run test:rules && npm run gamedata:verify && npm run test:api",
+    "test:rules": "npm run -w @izariam/rules test",
+    "test:api": "vitest run --root apps/api"
+  }
+}

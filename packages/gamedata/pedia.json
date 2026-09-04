@@ -1,0 +1,1944 @@
+{
+ "informations": {
+  "1": [
+   {
+    "key": "information1_1",
+    "kind": "title"
+   },
+   {
+    "key": "information1_2",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_build_landside.gif"
+   },
+   {
+    "key": "information1_3",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_sawmill_100x81.gif"
+   },
+   {
+    "key": "information1_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information1_5",
+    "kind": "text"
+   },
+   {
+    "key": "information1_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information1_7",
+    "kind": "text"
+   },
+   {
+    "key": "information1_8",
+    "kind": "heading"
+   },
+   {
+    "key": "information1_9",
+    "kind": "text"
+   }
+  ],
+  "2": [
+   {
+    "key": "information2_1",
+    "kind": "title"
+   },
+   {
+    "key": "information2_2",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_port.gif"
+   },
+   {
+    "key": "information2_3",
+    "kind": "text"
+   },
+   {
+    "key": "information2_4",
+    "kind": "text"
+   },
+   {
+    "key": "information2_5",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_academy.gif"
+   },
+   {
+    "key": "information2_6",
+    "kind": "text"
+   },
+   {
+    "key": "information2_7",
+    "kind": "heading"
+   },
+   {
+    "key": "information2_8",
+    "kind": "text"
+   },
+   {
+    "key": "information2_9",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_barracks.gif"
+   },
+   {
+    "key": "information2_10",
+    "kind": "text"
+   }
+  ],
+  "3": [
+   {
+    "key": "information3_1",
+    "kind": "title"
+   },
+   {
+    "key": "information3_2",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_shipyard.gif"
+   },
+   {
+    "key": "information3_3",
+    "kind": "text"
+   },
+   {
+    "key": "information3_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information3_5",
+    "kind": "text"
+   },
+   {
+    "key": "information3_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information3_7",
+    "kind": "text"
+   },
+   {
+    "key": "information3_8",
+    "kind": "heading"
+   },
+   {
+    "key": "information3_9",
+    "kind": "text"
+   },
+   {
+    "key": "information3_10",
+    "kind": "heading"
+   },
+   {
+    "key": "information3_11",
+    "kind": "text"
+   }
+  ],
+  "4": [
+   {
+    "key": "information4_1",
+    "kind": "title"
+   },
+   {
+    "key": "information4_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information4_3",
+    "kind": "text"
+   },
+   {
+    "key": "information4_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information4_5",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_finances.gif"
+   },
+   {
+    "key": "information4_6",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_palace.gif"
+   },
+   {
+    "key": "information4_7",
+    "kind": "text"
+   },
+   {
+    "key": "information4_8",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_embassy.gif"
+   },
+   {
+    "key": "information4_9",
+    "kind": "text"
+   }
+  ],
+  "5": [
+   {
+    "key": "information5_1",
+    "kind": "title"
+   },
+   {
+    "key": "information5_2",
+    "kind": "text"
+   }
+  ],
+  "6": [
+   {
+    "key": "information6_1",
+    "kind": "title"
+   },
+   {
+    "key": "information6_2",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_sawmill_100x81.gif"
+   },
+   {
+    "key": "information6_3",
+    "kind": "text"
+   }
+  ],
+  "7": [
+   {
+    "key": "information7_1",
+    "kind": "title"
+   },
+   {
+    "key": "information7_2",
+    "kind": "text"
+   },
+   {
+    "key": "information7_3",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_build_landside.gif"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_build_seaside.gif"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_build_wall.gif"
+   },
+   {
+    "key": "information7_4",
+    "kind": "text"
+   },
+   {
+    "key": "information7_5",
+    "kind": "text"
+   }
+  ],
+  "8": [
+   {
+    "key": "information8_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_academy.gif"
+   },
+   {
+    "key": "information8_2",
+    "kind": "text"
+   },
+   {
+    "key": "information8_3",
+    "kind": "text"
+   }
+  ],
+  "9": [
+   {
+    "key": "information9_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_port.gif"
+   },
+   {
+    "key": "information9_2",
+    "kind": "text"
+   },
+   {
+    "key": "information9_3",
+    "kind": "text"
+   },
+   {
+    "key": "information9_4",
+    "kind": "text"
+   },
+   {
+    "key": "information9_5",
+    "kind": "text"
+   }
+  ],
+  "10": [
+   {
+    "key": "information10_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_barracks.gif"
+   },
+   {
+    "key": "information10_2",
+    "kind": "text"
+   },
+   {
+    "key": "information10_3",
+    "kind": "text"
+   },
+   {
+    "key": "information10_7",
+    "kind": "text"
+   },
+   {
+    "key": "information10_8",
+    "kind": "text"
+   }
+  ],
+  "11": [
+   {
+    "key": "information11_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/island/noobschutz.gif"
+   },
+   {
+    "key": "information11_2",
+    "kind": "text"
+   }
+  ],
+  "12": [
+   {
+    "key": "information12_1",
+    "kind": "title"
+   },
+   {
+    "key": "information12_2",
+    "kind": "text"
+   },
+   {
+    "key": "information12_3",
+    "kind": "text"
+   },
+   {
+    "key": "information12_4",
+    "kind": "text"
+   },
+   {
+    "key": "information12_9",
+    "kind": "text"
+   }
+  ],
+  "13": [
+   {
+    "key": "information13_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_townhall.gif"
+   },
+   {
+    "key": "information13_2",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_tavern.gif"
+   },
+   {
+    "key": "information13_3",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_museum.gif"
+   },
+   {
+    "key": "information13_5",
+    "kind": "text"
+   }
+  ],
+  "14": [
+   {
+    "key": "information14_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_finances.gif"
+   },
+   {
+    "key": "information14_2",
+    "kind": "text"
+   },
+   {
+    "key": "information14_8",
+    "kind": "text"
+   },
+   {
+    "key": "information14_9",
+    "kind": "text"
+   },
+   {
+    "key": "information14_10",
+    "kind": "text"
+   },
+   {
+    "key": "information14_11",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_merchantnavy.gif"
+   },
+   {
+    "key": "information14_12",
+    "kind": "text"
+   },
+   {
+    "key": "information14_14",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_premium.gif"
+   },
+   {
+    "key": "information14_15",
+    "kind": "text"
+   }
+  ],
+  "15": [
+   {
+    "key": "information15_1",
+    "kind": "title"
+   },
+   {
+    "key": "information15_2",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_sawmill_100x81.gif"
+   },
+   {
+    "key": "information15_7",
+    "kind": "text"
+   },
+   {
+    "key": "information15_8",
+    "kind": "text"
+   }
+  ],
+  "16": [
+   {
+    "key": "information16_1",
+    "kind": "title"
+   },
+   {
+    "key": "information16_2",
+    "kind": "text"
+   },
+   {
+    "key": "information16_7",
+    "kind": "text"
+   },
+   {
+    "key": "information16_8",
+    "kind": "text"
+   }
+  ],
+  "27": [
+   {
+    "key": "information27_1",
+    "kind": "title"
+   },
+   {
+    "key": "information27_3",
+    "kind": "heading"
+   },
+   {
+    "key": "information27_4",
+    "kind": "text"
+   },
+   {
+    "key": "information27_5",
+    "kind": "text"
+   },
+   {
+    "key": "information27_10",
+    "kind": "heading"
+   },
+   {
+    "key": "information27_12",
+    "kind": "text"
+   },
+   {
+    "key": "information27_13",
+    "kind": "text"
+   },
+   {
+    "key": "information27_14",
+    "kind": "text"
+   },
+   {
+    "key": "information27_15",
+    "kind": "heading"
+   }
+  ],
+  "28": [
+   {
+    "key": "information28_1",
+    "kind": "title"
+   },
+   {
+    "key": "information28_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_3",
+    "kind": "text"
+   },
+   {
+    "key": "information28_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_8",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_10",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_12",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_14",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_16",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_18",
+    "kind": "heading"
+   }
+  ],
+  "29": [
+   {
+    "key": "information29_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/openbattle.gif"
+   },
+   {
+    "key": "information29_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_10",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_14",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_18",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_24",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_28",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_32",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_34",
+    "kind": "text"
+   },
+   {
+    "key": "information29_41",
+    "kind": "text"
+   },
+   {
+    "key": "information29_48",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/cityfight_small.gif"
+   },
+   {
+    "key": "information29_49",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/cityfight_medium.gif"
+   },
+   {
+    "key": "information29_50",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/cityfight_big.gif"
+   },
+   {
+    "key": "information29_51",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/openfight.gif"
+   },
+   {
+    "key": "information29_52",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/seafight.gif"
+   }
+  ],
+  "30": [
+   {
+    "key": "information30_1",
+    "kind": "title"
+   },
+   {
+    "key": "information30_2",
+    "kind": "text"
+   },
+   {
+    "key": "information30_3",
+    "kind": "text"
+   },
+   {
+    "key": "information30_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information30_5",
+    "kind": "text"
+   },
+   {
+    "key": "information30_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information30_7",
+    "kind": "text"
+   },
+   {
+    "key": "information30_8",
+    "kind": "heading"
+   },
+   {
+    "key": "information30_9",
+    "kind": "text"
+   }
+  ],
+  "31": [
+   {
+    "key": "information31_1",
+    "kind": "title"
+   },
+   {
+    "key": "information31_2",
+    "kind": "text"
+   },
+   {
+    "key": "information31_3",
+    "kind": "text"
+   },
+   {
+    "key": "information31_12",
+    "kind": "text"
+   }
+  ],
+  "32": [
+   {
+    "key": "information32_1",
+    "kind": "title"
+   }
+  ],
+  "33": [
+   {
+    "key": "information33_1",
+    "kind": "title"
+   },
+   {
+    "key": "information33_2",
+    "kind": "text"
+   },
+   {
+    "key": "information33_3",
+    "kind": "text"
+   }
+  ],
+  "34": [
+   {
+    "key": "information34_1",
+    "kind": "title"
+   },
+   {
+    "key": "information34_2",
+    "kind": "text"
+   },
+   {
+    "key": "information34_5",
+    "kind": "text"
+   },
+   {
+    "key": "information34_6",
+    "kind": "text"
+   },
+   {
+    "key": "information34_7",
+    "kind": "text"
+   },
+   {
+    "key": "information34_8",
+    "kind": "text"
+   },
+   {
+    "key": "information34_9",
+    "kind": "text"
+   }
+  ],
+  "35": [
+   {
+    "key": "information35_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_safehouse.gif"
+   },
+   {
+    "key": "information35_2",
+    "kind": "text"
+   },
+   {
+    "key": "information35_3",
+    "kind": "text"
+   },
+   {
+    "key": "information35_4",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/characters/spy_espionage.gif"
+   },
+   {
+    "key": "information35_13",
+    "kind": "text"
+   },
+   {
+    "key": "information35_14",
+    "kind": "text"
+   }
+  ],
+  "36": [
+   {
+    "key": "information36_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_embassy.gif"
+   },
+   {
+    "key": "information36_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information36_3",
+    "kind": "text"
+   },
+   {
+    "key": "information36_5",
+    "kind": "text"
+   }
+  ],
+  "37": [
+   {
+    "key": "information37_1",
+    "kind": "title"
+   },
+   {
+    "key": "information37_2",
+    "kind": "text"
+   },
+   {
+    "key": "information37_3",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_4",
+    "kind": "text"
+   },
+   {
+    "key": "information37_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_7",
+    "kind": "text"
+   },
+   {
+    "key": "information37_9",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_10",
+    "kind": "text"
+   },
+   {
+    "key": "information37_14",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_15",
+    "kind": "text"
+   },
+   {
+    "key": "information37_19",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_20",
+    "kind": "text"
+   }
+  ],
+  "38": [
+   {
+    "key": "information38_1",
+    "kind": "title"
+   },
+   {
+    "key": "information38_2",
+    "kind": "text"
+   },
+   {
+    "key": "information38_3",
+    "kind": "text"
+   },
+   {
+    "key": "information38_4",
+    "kind": "text"
+   }
+  ],
+  "39": [
+   {
+    "key": "information39_1",
+    "kind": "title"
+   },
+   {
+    "key": "information39_2",
+    "kind": "text"
+   },
+   {
+    "key": "information39_3",
+    "kind": "heading"
+   },
+   {
+    "key": "information39_10",
+    "kind": "heading"
+   }
+  ],
+  "40": [
+   {
+    "key": "information40_1",
+    "kind": "title"
+   },
+   {
+    "key": "information40_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information40_6",
+    "kind": "heading"
+   }
+  ],
+  "41": [
+   {
+    "key": "information41_1",
+    "kind": "title"
+   },
+   {
+    "key": "information41_2",
+    "kind": "text"
+   },
+   {
+    "key": "information41_6",
+    "kind": "text"
+   }
+  ],
+  "42": [
+   {
+    "key": "information42_1",
+    "kind": "title"
+   },
+   {
+    "key": "information42_2",
+    "kind": "text"
+   },
+   {
+    "key": "information42_3",
+    "kind": "text"
+   },
+   {
+    "key": "information42_4",
+    "kind": "text"
+   }
+  ],
+  "43": [
+   {
+    "key": "information43_1",
+    "kind": "title"
+   },
+   {
+    "key": "information43_2",
+    "kind": "text"
+   },
+   {
+    "key": "information43_3",
+    "kind": "text"
+   }
+  ],
+  "44": [
+   {
+    "key": "information44_1",
+    "kind": "title"
+   },
+   {
+    "key": "information44_2",
+    "kind": "text"
+   },
+   {
+    "key": "information44_4",
+    "kind": "text"
+   },
+   {
+    "key": "information44_5",
+    "kind": "text"
+   },
+   {
+    "key": "information44_6",
+    "kind": "text"
+   },
+   {
+    "key": "information44_7",
+    "kind": "text"
+   }
+  ]
+ },
+ "pedia": {
+  "0": [
+   {
+    "key": "pedia0_0",
+    "kind": "title"
+   },
+   {
+    "key": "pedia0_0_1",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_build_landside.gif"
+   },
+   {
+    "key": "information1_3",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_sawmill_100x81.gif"
+   },
+   {
+    "key": "information1_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information1_5",
+    "kind": "text"
+   },
+   {
+    "key": "information1_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information1_7",
+    "kind": "text"
+   },
+   {
+    "key": "information1_8",
+    "kind": "heading"
+   },
+   {
+    "key": "information1_9",
+    "kind": "text"
+   }
+  ],
+  "3": [
+   {
+    "key": "information3_1",
+    "kind": "title"
+   },
+   {
+    "key": "information3_2",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_shipyard.gif"
+   },
+   {
+    "key": "information3_3",
+    "kind": "text"
+   },
+   {
+    "key": "information3_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information3_5",
+    "kind": "text"
+   },
+   {
+    "key": "information3_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information3_7",
+    "kind": "text"
+   },
+   {
+    "key": "information3_8",
+    "kind": "heading"
+   },
+   {
+    "key": "information3_9",
+    "kind": "text"
+   },
+   {
+    "key": "information3_10",
+    "kind": "heading"
+   },
+   {
+    "key": "information3_11",
+    "kind": "text"
+   }
+  ],
+  "4": [
+   {
+    "key": "information4_1",
+    "kind": "title"
+   },
+   {
+    "key": "information4_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information4_3",
+    "kind": "text"
+   },
+   {
+    "key": "information4_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information4_5",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_finances.gif"
+   },
+   {
+    "key": "information4_6",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_palace.gif"
+   },
+   {
+    "key": "information4_7",
+    "kind": "text"
+   },
+   {
+    "key": "information4_8",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_embassy.gif"
+   },
+   {
+    "key": "information4_9",
+    "kind": "text"
+   }
+  ],
+  "5": [
+   {
+    "key": "information5_1",
+    "kind": "title"
+   },
+   {
+    "key": "information5_2",
+    "kind": "text"
+   }
+  ],
+  "6": [
+   {
+    "key": "information6_1",
+    "kind": "title"
+   },
+   {
+    "key": "information6_2",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_sawmill_100x81.gif"
+   },
+   {
+    "key": "information6_3",
+    "kind": "text"
+   }
+  ],
+  "7": [
+   {
+    "key": "information7_1",
+    "kind": "title"
+   },
+   {
+    "key": "information7_2",
+    "kind": "text"
+   },
+   {
+    "key": "information7_3",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_build_landside.gif"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_build_seaside.gif"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_build_wall.gif"
+   },
+   {
+    "key": "information7_4",
+    "kind": "text"
+   },
+   {
+    "key": "information7_5",
+    "kind": "text"
+   }
+  ],
+  "8": [
+   {
+    "key": "information8_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_academy.gif"
+   },
+   {
+    "key": "information8_2",
+    "kind": "text"
+   },
+   {
+    "key": "information8_3",
+    "kind": "text"
+   }
+  ],
+  "9": [
+   {
+    "key": "information9_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_port.gif"
+   },
+   {
+    "key": "information9_2",
+    "kind": "text"
+   },
+   {
+    "key": "information9_3",
+    "kind": "text"
+   },
+   {
+    "key": "information9_4",
+    "kind": "text"
+   },
+   {
+    "key": "information9_5",
+    "kind": "text"
+   }
+  ],
+  "10": [
+   {
+    "key": "information10_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_barracks.gif"
+   },
+   {
+    "key": "information10_2",
+    "kind": "text"
+   },
+   {
+    "key": "information10_3",
+    "kind": "text"
+   },
+   {
+    "key": "information10_7",
+    "kind": "text"
+   },
+   {
+    "key": "information10_8",
+    "kind": "text"
+   }
+  ],
+  "11": [
+   {
+    "key": "information11_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/island/noobschutz.gif"
+   },
+   {
+    "key": "information11_2",
+    "kind": "text"
+   }
+  ],
+  "12": [
+   {
+    "key": "information12_1",
+    "kind": "title"
+   },
+   {
+    "key": "information12_2",
+    "kind": "text"
+   },
+   {
+    "key": "information12_3",
+    "kind": "text"
+   },
+   {
+    "key": "information12_4",
+    "kind": "text"
+   },
+   {
+    "key": "information12_9",
+    "kind": "text"
+   }
+  ],
+  "13": [
+   {
+    "key": "information13_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_townhall.gif"
+   },
+   {
+    "key": "information13_2",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_tavern.gif"
+   },
+   {
+    "key": "information13_3",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_museum.gif"
+   },
+   {
+    "key": "information13_5",
+    "kind": "text"
+   }
+  ],
+  "14": [
+   {
+    "key": "information14_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_finances.gif"
+   },
+   {
+    "key": "information14_2",
+    "kind": "text"
+   },
+   {
+    "key": "information14_8",
+    "kind": "text"
+   },
+   {
+    "key": "information14_9",
+    "kind": "text"
+   },
+   {
+    "key": "information14_10",
+    "kind": "text"
+   },
+   {
+    "key": "information14_11",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_merchantnavy.gif"
+   },
+   {
+    "key": "information14_12",
+    "kind": "text"
+   },
+   {
+    "key": "information14_14",
+    "kind": "heading"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_premium.gif"
+   },
+   {
+    "key": "information14_15",
+    "kind": "text"
+   }
+  ],
+  "15": [
+   {
+    "key": "information15_1",
+    "kind": "title"
+   },
+   {
+    "key": "information15_2",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/informations/scr_sawmill_100x81.gif"
+   },
+   {
+    "key": "information15_7",
+    "kind": "text"
+   },
+   {
+    "key": "information15_8",
+    "kind": "text"
+   }
+  ],
+  "16": [
+   {
+    "key": "information16_1",
+    "kind": "title"
+   },
+   {
+    "key": "information16_2",
+    "kind": "text"
+   },
+   {
+    "key": "information16_7",
+    "kind": "text"
+   },
+   {
+    "key": "information16_8",
+    "kind": "text"
+   }
+  ],
+  "27": [
+   {
+    "key": "information27_1",
+    "kind": "title"
+   },
+   {
+    "key": "information27_3",
+    "kind": "heading"
+   },
+   {
+    "key": "information27_4",
+    "kind": "text"
+   },
+   {
+    "key": "information27_5",
+    "kind": "text"
+   },
+   {
+    "key": "information27_10",
+    "kind": "heading"
+   },
+   {
+    "key": "information27_12",
+    "kind": "text"
+   },
+   {
+    "key": "information27_13",
+    "kind": "text"
+   },
+   {
+    "key": "information27_14",
+    "kind": "text"
+   },
+   {
+    "key": "information27_15",
+    "kind": "heading"
+   }
+  ],
+  "28": [
+   {
+    "key": "information28_1",
+    "kind": "title"
+   },
+   {
+    "key": "information28_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_3",
+    "kind": "text"
+   },
+   {
+    "key": "information28_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_8",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_10",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_12",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_14",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_16",
+    "kind": "heading"
+   },
+   {
+    "key": "information28_18",
+    "kind": "heading"
+   }
+  ],
+  "29": [
+   {
+    "key": "information29_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/openbattle.gif"
+   },
+   {
+    "key": "information29_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_10",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_14",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_18",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_24",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_28",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_32",
+    "kind": "heading"
+   },
+   {
+    "key": "information29_34",
+    "kind": "text"
+   },
+   {
+    "key": "information29_41",
+    "kind": "text"
+   },
+   {
+    "key": "information29_48",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/cityfight_small.gif"
+   },
+   {
+    "key": "information29_49",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/cityfight_medium.gif"
+   },
+   {
+    "key": "information29_50",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/cityfight_big.gif"
+   },
+   {
+    "key": "information29_51",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/openfight.gif"
+   },
+   {
+    "key": "information29_52",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/ikipedia/seafight.gif"
+   }
+  ],
+  "30": [
+   {
+    "key": "information30_1",
+    "kind": "title"
+   },
+   {
+    "key": "information30_2",
+    "kind": "text"
+   },
+   {
+    "key": "information30_3",
+    "kind": "text"
+   },
+   {
+    "key": "information30_4",
+    "kind": "heading"
+   },
+   {
+    "key": "information30_5",
+    "kind": "text"
+   },
+   {
+    "key": "information30_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information30_7",
+    "kind": "text"
+   },
+   {
+    "key": "information30_8",
+    "kind": "heading"
+   },
+   {
+    "key": "information30_9",
+    "kind": "text"
+   }
+  ],
+  "31": [
+   {
+    "key": "information31_1",
+    "kind": "title"
+   },
+   {
+    "key": "information31_2",
+    "kind": "text"
+   },
+   {
+    "key": "information31_3",
+    "kind": "text"
+   },
+   {
+    "key": "information31_12",
+    "kind": "text"
+   }
+  ],
+  "32": [
+   {
+    "key": "information32_1",
+    "kind": "title"
+   }
+  ],
+  "33": [
+   {
+    "key": "information33_1",
+    "kind": "title"
+   },
+   {
+    "key": "information33_2",
+    "kind": "text"
+   },
+   {
+    "key": "information33_3",
+    "kind": "text"
+   }
+  ],
+  "34": [
+   {
+    "key": "information34_1",
+    "kind": "title"
+   },
+   {
+    "key": "information34_2",
+    "kind": "text"
+   },
+   {
+    "key": "information34_5",
+    "kind": "text"
+   },
+   {
+    "key": "information34_6",
+    "kind": "text"
+   },
+   {
+    "key": "information34_7",
+    "kind": "text"
+   },
+   {
+    "key": "information34_8",
+    "kind": "text"
+   },
+   {
+    "key": "information34_9",
+    "kind": "text"
+   }
+  ],
+  "35": [
+   {
+    "key": "information35_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_safehouse.gif"
+   },
+   {
+    "key": "information35_2",
+    "kind": "text"
+   },
+   {
+    "key": "information35_3",
+    "kind": "text"
+   },
+   {
+    "key": "information35_4",
+    "kind": "text"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/characters/spy_espionage.gif"
+   },
+   {
+    "key": "information35_13",
+    "kind": "text"
+   },
+   {
+    "key": "information35_14",
+    "kind": "text"
+   }
+  ],
+  "36": [
+   {
+    "key": "information36_1",
+    "kind": "title"
+   },
+   {
+    "kind": "image",
+    "src": "/skin/img/city/building_embassy.gif"
+   },
+   {
+    "key": "information36_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information36_3",
+    "kind": "text"
+   },
+   {
+    "key": "information36_5",
+    "kind": "text"
+   }
+  ],
+  "37": [
+   {
+    "key": "information37_1",
+    "kind": "title"
+   },
+   {
+    "key": "information37_2",
+    "kind": "text"
+   },
+   {
+    "key": "information37_3",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_4",
+    "kind": "text"
+   },
+   {
+    "key": "information37_6",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_7",
+    "kind": "text"
+   },
+   {
+    "key": "information37_9",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_10",
+    "kind": "text"
+   },
+   {
+    "key": "information37_14",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_15",
+    "kind": "text"
+   },
+   {
+    "key": "information37_19",
+    "kind": "heading"
+   },
+   {
+    "key": "information37_20",
+    "kind": "text"
+   }
+  ],
+  "38": [
+   {
+    "key": "information38_1",
+    "kind": "title"
+   },
+   {
+    "key": "information38_2",
+    "kind": "text"
+   },
+   {
+    "key": "information38_3",
+    "kind": "text"
+   },
+   {
+    "key": "information38_4",
+    "kind": "text"
+   }
+  ],
+  "39": [
+   {
+    "key": "information39_1",
+    "kind": "title"
+   },
+   {
+    "key": "information39_2",
+    "kind": "text"
+   },
+   {
+    "key": "information39_3",
+    "kind": "heading"
+   },
+   {
+    "key": "information39_10",
+    "kind": "heading"
+   }
+  ],
+  "40": [
+   {
+    "key": "information40_1",
+    "kind": "title"
+   },
+   {
+    "key": "information40_2",
+    "kind": "heading"
+   },
+   {
+    "key": "information40_6",
+    "kind": "heading"
+   }
+  ],
+  "41": [
+   {
+    "key": "information41_1",
+    "kind": "title"
+   },
+   {
+    "key": "information41_2",
+    "kind": "text"
+   },
+   {
+    "key": "information41_6",
+    "kind": "text"
+   }
+  ],
+  "42": [
+   {
+    "key": "information42_1",
+    "kind": "title"
+   },
+   {
+    "key": "information42_2",
+    "kind": "text"
+   },
+   {
+    "key": "information42_3",
+    "kind": "text"
+   },
+   {
+    "key": "information42_4",
+    "kind": "text"
+   }
+  ],
+  "43": [
+   {
+    "key": "information43_1",
+    "kind": "title"
+   },
+   {
+    "key": "information43_2",
+    "kind": "text"
+   },
+   {
+    "key": "information43_3",
+    "kind": "text"
+   }
+  ],
+  "44": [
+   {
+    "key": "information44_1",
+    "kind": "title"
+   },
+   {
+    "key": "information44_2",
+    "kind": "text"
+   },
+   {
+    "key": "information44_4",
+    "kind": "text"
+   },
+   {
+    "key": "information44_5",
+    "kind": "text"
+   },
+   {
+    "key": "information44_6",
+    "kind": "text"
+   },
+   {
+    "key": "information44_7",
+    "kind": "text"
+   }
+  ]
+ }
+}

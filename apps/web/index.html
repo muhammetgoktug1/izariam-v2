@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1000" />
+    <title>iZariam</title>
+    <style>
+      /* layout.css sizes #wrapper with min-height:100% off html/body. React
+         inserts #root between them, so it has to pass the height through or
+         everything positioned from the bottom (ships, islands) collapses to
+         the top. */
+      #root { height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

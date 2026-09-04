@@ -1,0 +1,99 @@
+# The rewrite: PostgreSQL + Express API + Vite/React client.
+#
+# Independent of the legacy stack in ../docker-compose.yml, which keeps running
+# on :8080 as the reference implementation. Both can be up at once.
+#
+# Every image is linux/arm64/v8 native. Ports bind to 127.0.0.1 only.
+name: izariam-v2
+
+services:
+  pg:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: izariam
+      POSTGRES_PASSWORD: izariam
+      POSTGRES_DB: izariam
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - izariam-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U izariam -d izariam"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # Applies the schema and seeds the 200-island world, then exits. The API
+  # waits on it completing so a fresh volume never serves an empty database.
+  migrate:
+    build:
+      context: .
+      dockerfile: docker/api.Dockerfile
+    environment:
+      DATABASE_URL: postgres://izariam:izariam@pg:5432/izariam
+    command: >
+      sh -c "npm run -w @izariam/db migrate && npm run -w @izariam/db seed"
+    depends_on:
+      pg:
+        condition: service_healthy
+    restart: "no"
+
+  api:
+    build:
+      context: .
+      dockerfile: docker/api.Dockerfile
+    environment:
+      DATABASE_URL: postgres://izariam:izariam@pg:5432/izariam
+      HOST: 0.0.0.0
+      PORT: "3001"
+    ports:
+      - "127.0.0.1:3001:3001"
+    volumes:
+      - ./:/app
+      # Keep the image's install: the host tree has no node_modules, and
+      # argon2's native addon is built for this container's libc anyway.
+      - /app/node_modules
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/web.Dockerfile
+    environment:
+      # Vite proxies /api to the API container rather than to localhost.
+      API_TARGET: http://api:3001
+      VITE_HOST: 0.0.0.0
+    ports:
+      # 5173 is a common Vite default and tends to collide with other local
+      # projects; the game lives here instead.
+      - "127.0.0.1:5175:5175"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      # design/ lives outside this compose file's directory, so it is mounted
+      # at the path vite.config.ts already resolves to.
+      - ../design:/design:ro
+    depends_on:
+      - api
+
+  # The staff panel: its own origin, its own cookies, none of its code in the
+  # player bundle. No design/ mount -- it shares no styling with the game.
+  admin:
+    build:
+      context: .
+      dockerfile: docker/admin.Dockerfile
+    environment:
+      API_TARGET: http://api:3001
+      VITE_HOST: 0.0.0.0
+    ports:
+      - "127.0.0.1:5174:5174"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    depends_on:
+      - api
+
+volumes:
+  izariam-pg:

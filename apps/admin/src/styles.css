@@ -1,0 +1,964 @@
+/* The panel's own look. Nothing here comes from design/ -- the 2012 game skin
+   positions off ids that only the game emits, and an admin tool has no reason
+   to look like a browser game.
+
+   The direction: a deep navy rail on the left, a cool paper surface beside
+   it, one emerald accent, and soft layered shadows. Class names are the
+   contract -- every screen keeps working when only this file changes. */
+
+:root {
+  --bg: #f4f6fa;
+  --panel: #ffffff;
+  --line: #e4e9f1;
+  --line-strong: #cfd8e4;
+  --ink: #17233a;
+  --muted: #64748b;
+
+  --rail-1: #0d1b2e;
+  --rail-2: #16283f;
+  --rail-ink: #9fb0c7;
+
+  --accent: #059669;
+  --accent-strong: #047857;
+  --accent-soft: #e6f6ef;
+  --accent-ink: #ffffff;
+
+  --blue: #2563eb;
+  --blue-soft: #e7eefd;
+  --amber: #b45309;
+  --amber-soft: #fdf1de;
+  --red: #dc2626;
+  --red-soft: #fdeaea;
+  --violet: #7c3aed;
+  --violet-soft: #f0eafd;
+  --cyan: #0e7490;
+  --cyan-soft: #e0f5fa;
+
+  --danger: #dc2626;
+  --warn: #b45309;
+
+  --radius-s: 8px;
+  --radius: 12px;
+  --radius-l: 16px;
+
+  --shadow-s: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-m: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.07);
+  --shadow-l: 0 24px 64px rgba(13, 27, 46, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(5, 150, 105, 0.18);
+}
+
+a {
+  color: var(--accent-strong);
+}
+
+/* --- layout ------------------------------------------------------------- */
+
+/* A sidebar and the column beside it. One markup, two shapes: the media query
+   at the foot of this file lays the same elements out as the strip the header
+   used to be, so the panel needs no drawer state, no toggle and no JS. */
+.layout {
+  display: grid;
+  /* minmax(0, 1fr), not 1fr: a track sized `1fr` still refuses to shrink below
+     its content's minimum, so one wide table would push the sidebar off the
+     left edge instead of scrolling inside .table-wrap. */
+  grid-template-columns: 240px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 14px;
+  background: linear-gradient(180deg, var(--rail-1), var(--rail-2));
+  color: #fff;
+  /* Five items that never grow, worth sticking to the viewport: a 25-row table
+     and its pager scroll the page, and the navigation should not leave with
+     them. */
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  /* Below .modal-backdrop's 10, or a dialog opens behind the menu. */
+  z-index: 5;
+}
+
+.sidebar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0 6px;
+  white-space: nowrap;
+}
+
+.sidebar .brand .mark {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #10b981, #0d9488);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.4);
+}
+
+.sidebar .brand .mark svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar .brand .text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.sidebar .brand .text b {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.sidebar .brand .text small {
+  margin-top: 2px;
+  color: var(--rail-ink);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  color: var(--rail-ink);
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  /* Drawn transparent on every item rather than added to the active one, so a
+     label does not shift by three pixels when it becomes current. */
+  box-shadow: inset 3px 0 0 transparent;
+}
+
+.nav a svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+.nav a.active {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.22), rgba(255, 255, 255, 0.05));
+  color: #fff;
+  box-shadow: inset 3px 0 0 #10b981;
+}
+
+.nav a.active svg {
+  opacity: 1;
+  color: #34d399;
+}
+
+.sidebar .foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: none;
+}
+
+.sidebar .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.sidebar .avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #34d399, #0d9488);
+  color: #06281e;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.sidebar .user .meta {
+  min-width: 0;
+}
+
+.sidebar .who {
+  color: #dbe4f0;
+  font-size: 12.5px;
+  font-weight: 500;
+  /* An address long enough to overflow a 240px column breaks anywhere rather
+     than widening the track. */
+  overflow-wrap: anywhere;
+}
+
+.sidebar .user .role {
+  color: var(--rail-ink);
+  font-size: 11px;
+}
+
+/* The one button on the dark rail: outline style, so it reads as a control
+   without fighting the nav for attention. */
+.sidebar .foot button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #c7d3e3;
+}
+
+.sidebar .foot button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.content {
+  /* Same reason as minmax(0, 1fr) above; belt and braces. */
+  min-width: 0;
+}
+
+.page {
+  max-width: 1240px;
+  margin: 28px auto;
+  padding: 0 28px;
+}
+
+/* --- page header -------------------------------------------------------- */
+
+.page-head {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 22px;
+}
+
+.page-head .titles {
+  min-width: 0;
+}
+
+.page-head h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.page-head .sub {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.page-head .actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* --- cards -------------------------------------------------------------- */
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-s);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.card > h2 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Section headings inside a card, e.g. the grant form's two field groups. */
+.card h3 {
+  margin: 20px 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card h3:first-of-type {
+  margin-top: 4px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.toolbar .spacer {
+  flex: 1;
+}
+
+.toolbar h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* --- table -------------------------------------------------------------- */
+
+.table-wrap {
+  overflow-x: auto;
+  /* Neighbour of a rounded card: let the clip follow the corner. */
+  border-radius: 0 0 var(--radius-l) var(--radius-l);
+}
+
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+table.table th,
+table.table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+table.table th {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* The last row's border belongs to the table, not to a header stacked on
+     top of it by a pager or a caption below. */
+  border-bottom: 1px solid var(--line-strong);
+}
+
+table.table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+table.table th.sortable:hover {
+  color: var(--ink);
+}
+
+table.table tbody tr {
+  transition: background 0.1s ease;
+}
+
+table.table tbody tr:hover {
+  background: #f6f9fc;
+}
+
+table.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+td.actions {
+  text-align: right;
+}
+
+td.actions button {
+  margin-left: 6px;
+}
+
+.empty {
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* --- controls ----------------------------------------------------------- */
+
+button,
+.btn {
+  font: inherit;
+  font-weight: 500;
+  padding: 7px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease,
+    box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background: #f4f7fa;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  transform: none;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 0 1px 2px rgba(4, 120, 87, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+button.primary:hover {
+  background: var(--accent-strong);
+}
+
+button.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(190, 18, 60, 0.3);
+}
+
+button.danger:hover {
+  filter: brightness(0.94);
+}
+
+/* Text-level destructive intent without the filled block. */
+button.danger-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--danger);
+}
+
+button.danger-ghost:hover {
+  background: var(--red-soft);
+  border-color: var(--red-soft);
+}
+
+button:focus-visible,
+.btn:focus-visible,
+.nav a:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, 0.55);
+  outline-offset: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+select,
+textarea {
+  font: inherit;
+  padding: 7px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s);
+  background: #fff;
+  color: var(--ink);
+  width: 100%;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.16);
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.field .hint {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.error {
+  color: var(--danger);
+  margin: 10px 0 0;
+}
+
+.notice {
+  color: var(--accent-strong);
+  margin: 10px 0 0;
+}
+
+.warn {
+  color: var(--warn);
+}
+
+/* --- badges ------------------------------------------------------------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.badge.off {
+  background: #eef1f5;
+  color: var(--muted);
+}
+
+.badge.banned {
+  background: var(--red-soft);
+  color: var(--danger);
+}
+
+.badge.pending {
+  background: var(--amber-soft);
+  color: var(--warn);
+}
+
+/* --- modal -------------------------------------------------------------- */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 27, 46, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 72px 16px;
+  z-index: 10;
+  animation: fade-in 0.16s ease-out;
+}
+
+.modal {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  width: 100%;
+  max-width: 460px;
+  padding: 22px;
+  box-shadow: var(--shadow-l);
+  animation: pop-in 0.18s ease-out;
+}
+
+.modal h3 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+}
+
+/* --- login -------------------------------------------------------------- */
+
+/* Its own stage rather than a card sitting on the admin grey: a navy field
+   with an emerald glow, the way the rail continues behind the door. */
+.login-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(640px 420px at 78% 18%, rgba(16, 185, 129, 0.2), transparent 60%),
+    radial-gradient(520px 380px at 12% 88%, rgba(37, 99, 235, 0.14), transparent 60%),
+    linear-gradient(160deg, var(--rail-1), var(--rail-2));
+}
+
+.login {
+  width: 100%;
+  max-width: 380px;
+}
+
+.login .card {
+  margin-bottom: 0;
+  padding: 28px;
+  box-shadow: var(--shadow-l);
+}
+
+.login .brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.login .brand .mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #10b981, #0d9488);
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.45);
+}
+
+.login .brand .mark svg {
+  width: 28px;
+  height: 28px;
+}
+
+.login h1 {
+  font-size: 17px;
+  text-align: center;
+  margin: 0 0 4px;
+}
+
+.login .sub {
+  margin: 0 0 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.login button[type="submit"] {
+  width: 100%;
+  padding: 9px 14px;
+  margin-top: 4px;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* --- loading ------------------------------------------------------------ */
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.loading::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--line-strong);
+  border-top-color: var(--accent);
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- dashboard ---------------------------------------------------------- */
+
+/* auto-fit rather than a fixed count: the same rule gives four tiles across on
+   a desk, two on a tablet and one on a phone, with no media query of its own. */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.stat {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-s);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-m);
+}
+
+.stat .icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+}
+
+.stat .icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.stat .icon.green {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.stat .icon.blue {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+.stat .icon.amber {
+  background: var(--amber-soft);
+  color: var(--warn);
+}
+
+.stat .icon.red {
+  background: var(--red-soft);
+  color: var(--danger);
+}
+
+.stat .icon.violet {
+  background: var(--violet-soft);
+  color: var(--violet);
+}
+
+.stat .icon.cyan {
+  background: var(--cyan-soft);
+  color: var(--cyan);
+}
+
+.stat .value {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  /* Digits of equal width, so a column of numbers does not shimmer when one of
+     them ticks over. */
+  font-variant-numeric: tabular-nums;
+}
+
+.stat .value.warn {
+  color: var(--danger);
+}
+
+.stat .label {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+/* .card carries a bottom margin for the stacked case; inside a grid the gap
+   already does that job. */
+.columns > .card {
+  margin-bottom: 0;
+}
+
+/* --- grants and logs ---------------------------------------------------- */
+
+/* Mode and amount on one line. Inputs are width:100% by default, so the select
+   has to be pinned or it takes half the row. */
+.grant-row {
+  display: flex;
+  gap: 8px;
+}
+
+.grant-row select {
+  width: 130px;
+  flex: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0 16px;
+}
+
+table.table td.num,
+table.table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The one cell whose content is prose: the table's global nowrap would make it
+   a single kilometre-wide line. */
+table.table td.detail {
+  white-space: normal;
+  min-width: 240px;
+  max-width: 420px;
+  color: var(--muted);
+}
+
+.hint.error {
+  color: var(--danger);
+}
+
+/* --- narrow ------------------------------------------------------------- */
+
+/* The panel declares width=device-width, so a phone gets CSS pixels and this
+   applies. Five links do not fit down the side of a 400px screen, so the
+   sidebar becomes a row again -- the brand and the sign-out block hold their
+   place and only the links scroll. */
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sidebar {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    height: auto;
+    padding: 10px 14px;
+  }
+
+  .sidebar .brand .text small {
+    display: none;
+  }
+
+  .nav {
+    flex-direction: row;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    /* The links scroll; the rail should not show them a scrollbar for it. */
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    white-space: nowrap;
+    box-shadow: inset 0 -3px 0 transparent;
+  }
+
+  .nav a.active {
+    box-shadow: inset 0 -3px 0 #10b981;
+  }
+
+  .sidebar .foot {
+    margin-top: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sidebar .user {
+    padding: 4px 8px 4px 4px;
+    background: transparent;
+  }
+
+  .sidebar .user .meta {
+    display: none;
+  }
+
+  .sidebar .foot button {
+    width: auto;
+  }
+
+  .page {
+    margin: 18px auto;
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  /* Who you are is nice to know; being able to sign out is not optional. */
+  .sidebar .user {
+    display: none;
+  }
+
+  .stat {
+    padding: 14px;
+  }
+}
